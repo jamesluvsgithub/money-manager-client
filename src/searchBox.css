@@ -1,0 +1,64 @@
+.searchBox{
+  background-color: rgb(200, 190, 235);
+  width: 95%;
+  margin: 1.5vh;
+  padding: 1.5vh;
+  border-radius: 5px;
+}
+
+.searchForm {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.25rem 0 0;
+  padding: 0 0.5rem 0.25rem;
+  border-bottom: none;
+}
+
+.searchForm label {
+  position: absolute;
+  left: -99999px;
+}
+
+.searchForm input[type='text'] {
+  flex-grow: 1;
+  max-width: 100%;
+  max-height: 30px;
+  min-height: 24px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+.searchForm input[type='number'] {
+  flex-grow: 1;
+  max-width: 100%;
+  max-height: 30px;
+  min-height: 24px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+.searchFilter {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.25rem 0 0;
+  padding: 0 0.5rem 0.25rem;
+  border-bottom: none;
+}
+
+.searchFilter select {
+  margin-left: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+  color: rgb(50, 50, 75);
+  font-size:14px
+}
+
+.searchFilter label {
+  font-size: 16px;
+}
