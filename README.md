@@ -1,67 +1,42 @@
-# Getting Started with Create React App
+# a very crude money manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+money-manager is the frontend, server is the backend
 
-## Available Scripts
+### current working features:
+  - adding expenses, which are displayed with their name and amount
 
-In the project directory, you can run:
+  - the total cost of all the expenses added is displayed
 
-### `npm start`
+  - searching expenses, which can be done by name, min and max amount, and date added
+    - this changes the total cost that is displayed
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - adding goals, which can of two types: max total expenses or a max single expense
+    - if a goal is added and a goal of the same type already exists, then the new goal will overwrite the old one, updating it
+    - the duration / time period of the goal can be chosen, after which the goal will expire
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  - if there is a goal for a max single expense, the expenses will be different color based on its status in regard to the goal
+    - red means that the expense amount exceeded the max amount
+    - yellow means the expense amount > 85% of the max amount
+    - white means the expense amount < 85% of the max amount
 
-### `npm test`
+  - when a goal expires, it will be crossed out and the colors of the expenses will no longer be effected by it
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### work in progress features:
+  - if there is a goal for max total expenses, the expenses will be different color based on its status in regard to the goal
+    - red means the expense made the total greater than the max total
+    - yellow means the current total > 80% of the max total
+    - yellow can also mean the expense amount > 20% of the max total
+    - white means the current total < 80% of the max total and the amount > 20% of the max total
 
-### `npm run build`
+### issues:
+  - when a goal is overwritten, it initially just looks like the old goal was deleted
+    - the page needs to be refreshed to see all the changes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - deleting an expense or goal that was just created will lead to an error
+    - refreshing the page after creating will prevent the error
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
+  - adding / updating goals is very buggy because i am very bad with select elements (dropdown menus)
+    - if adding or updating multiple goals in succession, you should select a random option and then the desired option
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
