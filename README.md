@@ -1,5 +1,8 @@
 # a very crude money manager
 
+I attemped to deploy this app using render.com, but the backend (mongoDB atlas) only works locally on my pc :,)
+https://money-manager-client.onrender.com/
+
 ### current working features:
   - adding expenses, which are displayed with their name and amount
 
@@ -35,9 +38,3 @@
 
   - adding / updating goals is very buggy because i am very bad with select elements (dropdown menus)
     - if adding or updating multiple goals in succession, you should select a random option and then the desired option
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
