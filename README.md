@@ -1,7 +1,5 @@
 # a very crude money manager
 
-money-manager is the frontend, server is the backend
-
 ### current working features:
   - adding expenses, which are displayed with their name and amount
 
